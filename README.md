@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[Link to repository](https://github.com/MorgansPlayGames/parkers-readme-gen)
 [Video of parkers-readme-gen in action](https://drive.google.com/file/d/1KwLw2g3kOZ5rLZrg6JdhJy0E1OKpjMtP/view)
 
 1. [ Description. ](#description)
