@@ -6,9 +6,8 @@
 2. [ Installation ](#installation-instructions)
 3. [ Usage Information ](#usage-information)
 4. [ Contribution Guidelines ](#contribution-guidelines)
-5. [ Licence](#licence)
-6. [ GitHub](#github-username)
-7. [ Questions ](#questions?)
+5. [ Licence ](#licence)
+6. [ Questions ](#questions?)
 
 ## Description:
     Creates formatted readme using JS and input from npm Inquirer.
@@ -28,10 +27,15 @@
     * Email
 
 ### Contribution Guidelines
+    Fork, update, and
     Submit your code to me!
 
 ### Licence 
-    MIT
+    Copyright (c) 2020, asdf
+    All rights reserved.
+        
+    This source code is licensed under the MIT-style license found in the
+    LICENSE file in the root directory of this source tree.
 
 ### Questions?
     GitHub: MorgansPlayGames

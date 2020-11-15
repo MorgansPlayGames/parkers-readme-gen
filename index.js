@@ -2,8 +2,9 @@
 //required node modules
 const inquirer = require('inquirer');
 const fs = require('fs');
+//markdown generator that creates the text within the md
 const generateMarkdown = require('./utils/generateMarkdown');
-
+//array of badges to go in top of readme
 const badgeArray = {
     'None':'',
     'MIT':'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
@@ -59,28 +60,10 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    const licenceArray = {
-        'None':'No Licence',
-        'MIT':`Copyright (c) 2020, ${data.GitHubUsername}
-    All rights reserved.
-        
-    This source code is licensed under the MIT-style license found in the
-    LICENSE file in the root directory of this source tree. `,
-        'Apache':`Copyright (c) 2020, ${data.GitHubUsername}
-    All rights reserved.
-        
-    This source code is licensed under the Apache-style license found in the
-    LICENSE file in the root directory of this source tree. `, 
-        'GPL-3.0':`Copyright (c) 2020, ${data.GitHubUsername}
-    All rights reserved.
-        
-    This source code is licensed under the MIT-style license found in the
-    LICENSE file in the root directory of this source tree. `
-    }
     data.badge = badgeArray[data.licence];
-    data.licence = licenceArray[data.licence];
-
+    //make the text to go into the readme
     let markdown = generateMarkdown(data);
+    //create readme file
     fs.writeFile(fileName, markdown, (err) =>
       err ? console.log(err) : console.log('Success!'));
     

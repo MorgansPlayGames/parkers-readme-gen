@@ -24,7 +24,11 @@ ${data.badge}
     ${data.contributionGuidelines}
   
 ### Licence 
-    ${data.licence}
+    Copyright (c) 2020, ${data.GitHubUsername}
+    All rights reserved.
+    
+    This source code is licensed under the ${data-licence}-style license found in the
+    LICENSE file in the root directory of this source tree.
   
 ### Questions?
     GitHub Username: ${data.GitHubUsername}
