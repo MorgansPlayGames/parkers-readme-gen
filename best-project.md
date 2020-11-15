@@ -1,4 +1,4 @@
-# asdf
+# best-project
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -10,24 +10,24 @@
 6. [ Questions ](#questions?)
 
 ## Description:
-    asdf
+    This is the best project
   
 ### Installation Instructions
-    asdf
+    Download and click install!
    
 ### Usage Information
-    asdf
+    Input your name and program tells you that you are awesome
   
 ### Contribution Guidelines
-    asdf
+    Modify a fork, submit your code!
   
 ### Licence 
-    Copyright (c) 2020, asdf
+    Copyright (c) 2020, MorgansPlayGames
     All rights reserved.
     
     This source code is licensed under the MIT-style license found in the
     LICENSE file in the root directory of this source tree.
   
 ### Questions?
-    GitHub Username: asdf
-    Email: asdf
+    GitHub Username: MorgansPlayGames
+    Email: jpmaster13@msn.com

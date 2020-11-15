@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[Video of parkers-readme-gen in action](https://drive.google.com/file/d/1KwLw2g3kOZ5rLZrg6JdhJy0E1OKpjMtP/view)
+
 1. [ Description. ](#description)
 2. [ Installation ](#installation-instructions)
 3. [ Usage Information ](#usage-information)
@@ -25,6 +27,7 @@
     * Which licence do you want
     * GitHub username
     * Email
+    Then a readme is created with the title of [project title].md
 
 ### Contribution Guidelines
     Fork, update, and
