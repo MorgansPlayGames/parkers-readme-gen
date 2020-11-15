@@ -2,6 +2,15 @@
 function generateMarkdown(data) {
 return `# ${data.title}
 
+${data.badge}
+
+1. [ Description ](#description)
+2. [ Installation ](#installation-instructions)
+3. [ Usage Information ](#usage-information)
+4. [ Contribution Guidelines ](#contribution-guidelines)
+5. [ Licence ](#licence)
+6. [ Questions ](#questions?)
+
 ## Description:
     ${data.description}
   
@@ -17,10 +26,8 @@ return `# ${data.title}
 ### Licence 
     ${data.licence}
   
-### GitHub Username
-    ${data.GitHubUsername}
-  
 ### Questions?
+    GitHub Username: ${data.GitHubUsername}
     Email: ${data.email}
 `;
 }

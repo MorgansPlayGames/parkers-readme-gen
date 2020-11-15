@@ -1,7 +1,17 @@
 
+//required node modules
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
+
+const badgeArray = {
+    'None':'',
+    'MIT':'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+    'Apache':'[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)', 
+    'GPL-3.0':'[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+}
+    
+
 // array of questions for user
 const questions = [
     {
@@ -33,7 +43,7 @@ const questions = [
         type: 'list',
         name: 'licence',
         message: 'what licence do you want? ',
-        choices: ['none', 'MIT']
+        choices: ['None', 'MIT', 'Apache', 'GPL-3.0']
     },
     {
         type: 'input',
@@ -49,7 +59,27 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-    console.log(data);
+    const licenceArray = {
+        'None':'No Licence',
+        'MIT':`Copyright (c) 2020, ${data.GitHubUsername}
+    All rights reserved.
+        
+    This source code is licensed under the MIT-style license found in the
+    LICENSE file in the root directory of this source tree. `,
+        'Apache':`Copyright (c) 2020, ${data.GitHubUsername}
+    All rights reserved.
+        
+    This source code is licensed under the Apache-style license found in the
+    LICENSE file in the root directory of this source tree. `, 
+        'GPL-3.0':`Copyright (c) 2020, ${data.GitHubUsername}
+    All rights reserved.
+        
+    This source code is licensed under the MIT-style license found in the
+    LICENSE file in the root directory of this source tree. `
+    }
+    data.badge = badgeArray[data.licence];
+    data.licence = licenceArray[data.licence];
+
     let markdown = generateMarkdown(data);
     fs.writeFile(fileName, markdown, (err) =>
       err ? console.log(err) : console.log('Success!'));
@@ -61,7 +91,7 @@ function init() {
     
     //question asking module
     inquirer
-    .prompt(questions)
+    .prompt(questions) 
     .then(answers => {
         // Put the data into a md file for a formatted readme
         let fileName = `${answers.title}.md`;
